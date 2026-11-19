@@ -10,3 +10,16 @@ html > body[data-scroll-locked] {
   margin-right: 0px !important;
   --removed-body-scroll-bar-size: 0px !important;
 }
+
+.katex .msupsub {
+  font-size: 70% !important;
+}
+
+.katex .msupsub .msupsub {
+  font-size: 65% !important;
+}
+
+.katex .sizing .msupsub,
+.katex .reset-size .msupsub {
+  font-size: 70% !important;
+}
