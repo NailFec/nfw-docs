@@ -1,20 +1,28 @@
-import { createGetUrl } from 'fumadocs-core/source';
+import { createGetUrl } from "fumadocs-core/source";
 
-export const appName = 'NailFec Docs';
-export const docsRoute = '/docs';
-export const docsImageRoute = '/og/docs';
+export const appName = "NailFec Docs";
+export const docsRoute = "/docs";
+export const docsImageRoute = "/og/docs";
 
-// fill this with your actual GitHub info, for example:
+export const site = {
+  author: "NailFec",
+  year: 2026,
+  url: "https://nailfec.com",
+  email: "nailfec17@gmail.com",
+  license: "CC BY-NC-SA 4.0",
+  licenseUrl: "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+};
+
 export const gitConfig = {
-    user: 'NailFec',
-    repo: 'nfw-docs',
-    branch: 'main',
+  user: "NailFec",
+  repo: "nfw-docs",
+  branch: "main",
 };
 
 const getImageUrl = createGetUrl(docsImageRoute);
 
 export function getPageImageUrl(page: { slugs: string[]; locale?: string }) {
-    const segments = [...page.slugs, 'image.png'];
+  const segments = [...page.slugs, "image.png"];
 
-    return { segments, url: getImageUrl(segments, page.locale) };
+  return { segments, url: getImageUrl(segments, page.locale) };
 }
